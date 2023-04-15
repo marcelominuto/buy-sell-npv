@@ -98,7 +98,7 @@ formRef.addEventListener("submit", (e) => {
          .then(a=>a.json()).then(console.log)
      }
 
-     toast("Registrado com sucesso!")
+     toast("Registrado com sucesso!!")
 })
 
 function getSellMsg(){
