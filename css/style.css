@@ -1,0 +1,142 @@
+.wrapper{
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-image: url("../images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    gap: 1rem;
+}
+
+.informations{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: .5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.textfield{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.textfield label {
+    margin-bottom: .25rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.textfield > input, select {
+    width: 100%;
+    border: none;
+    padding: .5rem;
+    border-radius: .25rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.picker{
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    border-bottom: solid .1rem black;
+}
+
+.option{
+    padding: 1rem;
+}
+
+.option input{
+    width: auto;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: .5rem;
+	padding: .5rem;
+	background: #454857;
+    transition: .4s;
+}
+
+.option input:checked {
+	background-image: linear-gradient(180deg, #95d891, #74bbad);
+	color: #fff;
+}
+
+.option > label{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+input, select{
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.buysell{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: .5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sell{
+    display: none;
+}
+
+button{
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: .4s;
+}
+
+button:hover{
+    background-color: lightgreen;
+    border: solid .1rem green;
+}
+
+.toast {
+    visibility: hidden;
+    opacity: 0;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: fixed;
+    border-radius: .5rem;
+    padding: 1rem;
+    background-color: rgba(131,75,152,255);
+    color: white;
+    text-align: center;
+    width: 20rem;
+    transition: opacity 0.5s linear;
+}
+

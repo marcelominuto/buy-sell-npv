@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <title>Compras - Vendas / NPV</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form>
+            <div class="informations">
+                <div class="textfield picker">
+                    <div class="option">
+                        <label for="buyInput">Compra</label>
+                        <input type="radio" name="condition" id="buyInput" checked>
+                    </div>
+                    <div class="option">
+                        <label for="sellInput">Venda</label>
+                        <input type="radio" name="condition" id="sellInput">
+                    </div>
+                </div>
+                <div class="textfield">
+                    <label for="modelInput">Modelo</label>
+                    <select name="models" id="modelInput">
+                        <option value="Dunk Low">Dunk Low</option>
+                        <option value="Dunk SB Low">Dunk SB Low</option>
+                        <option value="Dunk High">Dunk High</option>
+                        <option value="Dunk SB High">Dunk SB High</option>
+                        <option value="Jordan 1 Low">Jordan 1 Low</option>
+                        <option value="Jordan 1 Mid">Jordan 1 Mid</option>
+                        <option value="Jordan 1 High">Jordan 1 High</option>
+                        <option value="Jordan 4">Jordan 4</option>
+                        <option value="Air Force">Air Force</option>
+                        <option value="Yeezy 350">Yeezy 350</option>
+                        <option value="Yeezy 500">Yeezy 500</option>
+                        <option value="Yeezy 700">Yeezy 700</option>
+                        <option value="Yeezy Slide">Yeezy Slide</option>
+                        <option value="Yeezy Foam Rnnr">Yeezy Foam Rnnr</option>
+                        <option value="NB 550">NB 550</option>
+                    </select>
+                </div>
+                <div class="textfield">
+                    <label for="colorwayInput">Colorway</label>
+                    <input type="text" name="colorway" id="colorwayInput" required>
+                </div>
+                <div class="textfield">
+                    <label for="sizeInput">Tamanho</label>
+                    <select name="sizes" id="sizeInput">
+                        <option value="34">34</option>
+                        <option value="34.5">34.5</option>
+                        <option value="35">35</option>
+                        <option value="35.5">35.5</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="37.5">37.5</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="39.5">39.5</option>
+                        <option value="40">40</option>
+                        <option value="40.5">40.5</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="42.5">42.5</option>
+                        <option value="43">43</option>
+                        <option value="43.5">43.5</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="buy buysell">
+                <div class="textfield">
+                    <label for="storeInput">Loja</label>
+                    <input type="text" name="store" id="storeInput" required>
+                </div>
+                <div class="textfield">
+                    <label for="condInput">Condição</label>
+                    <select name="condition" id="condInput">
+                        <option value="DSWT">DSWT</option>
+                        <option value="Usado">Usado</option>
+                    </select>
+                </div>
+                <div class="textfield">
+                    <label for="priceInput">Preço</label>
+                    <input type="number" name="price" id="priceInput" step="0.01" required>
+                </div>
+                <div class="textfield">
+                    <label for="buyDateInput">Data Compra</label>
+                    <input type="date" name="buyDate" id="buyDateInput" required>
+                </div>
+                <div class="textfield">
+                    <label for="paymentInput">Forma Pagamento</label>
+                    <select name="payment" id="paymentInput">
+                        <option value="Cartão">Cartão</option>
+                        <option value="PIX">PIX</option>
+                    </select>
+                </div>
+                <div class="textfield cardInfo">
+                    <label for="cardInput">Cartão</label>
+                    <select name="card" id="cardInput">
+                        <option value="Otto Nubank">Otto Nubank</option>
+                        <option value="Marcelo Nubank">Marcelo Nubank</option>
+                        <option value="Barbara Master">Barbara Master</option>
+                        <option value="Otto Mae Master">Otto Mae Master</option>
+                        <option value="Cao Visa">Cao Visa</option>
+                        <option value="Cartão NPV">Cartão NPV</option>
+                        <option value="Marcelo Bradesco">Marcelo Bradesco</option>
+                        <option value="Marcelo Visa">Marcelo Visa</option>
+                        <option value="Marcelo C6">Marcelo C6</option>
+                        <option value="Cartão Pai Otto">Cartão Pai Otto</option>
+                    </select>
+                </div>
+                <div class="textfield cardInfo">
+                    <label for="parcInput">Parcelas</label>
+                    <select name="parcelas" id="parcInput">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="sell buysell">
+                <div class="textfield">
+                    <label for="platInput">Plataforma</label>
+                    <select name="plataform" id="platInput">
+                        <option value="Droper">Droper</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Repasse">Repasse</option>
+                        <option value="Loja">Loja</option>
+                        <option value="Site">Site</option>
+                    </select>
+                </div>
+                <div class="textfield">
+                    <label for="saleInput">Venda</label>
+                    <input type="number" name="sale" id="saleInput" step="0.01">
+                </div>
+                <div class="textfield">
+                    <label for="saleDateInput">Data Venda</label>
+                    <input type="date" name="saleDate" id="saleDateInput">
+                </div>
+                <div class="textfield">
+                    <label for="taxesInput">Taxas/Envios</label>
+                    <input type="number" name="taxes" id="taxesInput" step="0.01" value="0">
+                </div>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="toast"></div>
+    </div>
+</body>
+</html>
