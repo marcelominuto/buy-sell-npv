@@ -1,4 +1,4 @@
-const wbhook = "https://discord.com/api/webhooks/1096042130926993538/12WyOocbi8rHDpPBb9Fg_LzhEj8rRWxh7VoGID8y8MMdM84uYbKUuyVyeyuZxz6VObWC"
+const wbhook = "https://discord.com/api/webhooks/1097589837600665730/lWDZ8m-j9SgjBtwnPXvbDhOrQZ4RJJC7clWmlwZREGBQVm8Bhc1WRQyW0lB5cm0qeNVj"
 
 const formRef = document.querySelector("form");
 
