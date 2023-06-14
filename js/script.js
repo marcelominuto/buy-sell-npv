@@ -32,6 +32,9 @@ const toastRef = document.querySelector(".toast");
 buyDateInputRef.valueAsDate = new Date();
 saleDateInputRef.valueAsDate = new Date();
 
+buyDateFormated = `${buyDateInputRef.valueAsDate.getDate()}/${buyDateInputRef.valueAsDate.getMonth() + 1}/${buyDateInputRef.valueAsDate.getFullYear()}`;
+saleDateFormated = `${saleDateInputRef.valueAsDate.getDate()}/${saleDateInputRef.valueAsDate.getMonth() + 1}/${saleDateInputRef.valueAsDate.getFullYear()}`;
+
 sellInputRef.addEventListener("click", (e) =>{
     addRequiredSell();
     removeRequiredBuy();
@@ -67,7 +70,7 @@ formRef.addEventListener("submit", (e) => {
         addField(buyMsg, "Loja:", storeInputRef.value)
         addField(buyMsg, "Condição:", condInputRef.value)
         addField(buyMsg, "Preço:", "R$ " + priceInputRef.value)
-        addField(buyMsg, "Data Compra:", buyDateInputRef.value)
+        addField(buyMsg, "Data Compra:", buyDateFormated)
         addField(buyMsg, "Forma Pagamento:", paymentInputRef.value)
         if(paymentInputRef.value == "Cartão"){
             addField(buyMsg, "Cartão:", cardInputRef.value) 
@@ -85,9 +88,9 @@ formRef.addEventListener("submit", (e) => {
          addField(sellMsg, "Tamanho:", sizeInputRef.value)
          addField(sellMsg, "Plataforma", platInputRef.value)
          addField(sellMsg, "Venda", "R$ " + saleInputRef.value)
-         addField(sellMsg, "Data Venda", saleDateInputRef.value)
+         addField(sellMsg, "Data Venda", saleDateFormated)
          if(platInputRef.value == "Droper"){
-             addField(sellMsg, "Taxas/Envios", "R$ " + taxesInputRef.value + " | Taxa Droper: R$ " + saleInputRef.value * 0.08)
+             addField(sellMsg, "Taxas/Envios", "R$ " + taxesInputRef.value + " | Taxa Droper: R$ " + (saleInputRef.value * 0.08).toFixed(2))
          } else {
             addField(sellMsg, "Taxas/Envios", "R$ " + taxesInputRef.value)
          }
